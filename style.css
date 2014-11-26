@@ -1,0 +1,68 @@
+/*
+ Theme Name:   Thine-Child Custom Header
+ Theme URI:    http://themes.uxbarn.com/redirect.php?theme=thine_wp
+ Description:  Child theme based on Thine.  Modifies the size and locations of the menu and logo.
+ License: GPL, ThemeForest License
+ License URI: http://codex.wordpress.org/GPL, http://themeforest.net/licenses
+ Author:       Patrick Mauro
+ Author URI:   http://patrick.mauro.com
+ Template:     Thine
+ Version:      1.0.0
+ Tags: white, red, gray, one-column, two-columns, three-columns, four-columns, left-sidebar, responsive-layout, custom-background, custom-colors, custom-menu, featured-images, sticky-post, theme-options, translation-ready
+ Text Domain: uxbarn-child
+*/
+
+/* =Theme customization starts here
+-------------------------------------------------------------- */
+
+
+#logo-wrapper {
+	position: relative; 
+	padding-bottom: 5px;
+}
+
+#tagline {
+	position: absolute;
+	bottom: 0px !important;
+}
+
+#menu-main-nav {
+	margin-left:0%;
+}
+
+#content-wrapper.no-intro {
+	width: 100%;
+}
+
+.top-bar .toggle-topbar.menu-icon a {
+	color: #333;
+	font-size: 14px;
+	margin-right: 10px;
+	text-indent: -55px;
+}
+
+.row .row {
+	margin-bottom: 45px;
+}
+
+@media only screen and (min-width: 1025px) {
+	#menu-wrapper {
+		position: absolute; 
+		top: 0px; 
+		right: 0px;
+		left: auto;
+		height: 50px;
+		z-index: 2;
+	}
+}
+
+@media only screen and (max-width: 1024px) {
+	#menu-wrapper {
+		top: auto;
+		right: auto;
+		left: auto;
+		height: auto;
+		z-index: auto;
+	}
+}
+
