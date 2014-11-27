@@ -16,33 +16,6 @@ function thine_parent_styles() {
 
 }
 add_action( 'wp_enqueue_scripts', 'thine_parent_styles', 9 );
-/*function load_all_styles() {
-
-	wp_dequeue_style( );
-	wp_dequeue_style( );
-	wp_dequeue_style( );
-	wp_dequeue_style( );
-	wp_dequeue_style( );
-	wp_dequeue_style( );
-	wp_dequeue_style( 'uxbarn-theme-css'); // this is the main stylesheet
-	wp_dequeue_style( 'uxbarn-theme-responsive-css');
-	wp_dequeue_style( 'uxbarn-fancybox-css');
-	wp_dequeue_style( 'uxbarn-fancybox-helpers-thumbs-css');
-	wp_dequeue_style( 'uxbarn-isotope-css');
-	wp_dequeue_style( 'uxbarn-theme-rev-styles-css');
-	wp_dequeue_style( 'js_composer_front-css');
-	wp_dequeue_style( 'js_composer_custom_css-css');
-	wp_dequeue_style( 'uxbarn-isotope-css');
-	wp_dequeue_style( 'uxbarn-isotope-css');
-	wp_dequeue_style( 'uxbarn-isotope-css');
-
-	wp_enqueue_style( 'uxbarn-theme-css', get_template_directory_uri() . '/style.css', array(), '0.1', 'all' );
-
-
-}
-add_action( 'wp_enqueue_scripts', 'load_all_styles', 9 );
-
-*/
 
 /**
  * Load the modified javascript for the theme
@@ -50,10 +23,10 @@ add_action( 'wp_enqueue_scripts', 'load_all_styles', 9 );
  */
 function thine_script_fix()
 {
-	//wp_register_script( 'uxbarn-theme', get_template_directory_uri() . '/js/thine.js', array( 'jquery', 'uxbarn-isotope' ), null, true );
-
     wp_deregister_script( 'uxbarn-theme' );
     wp_register_script( 'uxbarn-theme', get_stylesheet_directory_uri() . '/js/thine.js', array( 'jquery', 'uxbarn-isotope' ), null, true );
+    wp_register_script( 'Thine-child-js', get_stylesheet_directory_uri() . '/js/thine-child.js', false, false, true );
+    wp_enqueue_script( 'Thine-child-js');
 }
 add_action( 'wp_enqueue_scripts', 'thine_script_fix' );
 ?>
