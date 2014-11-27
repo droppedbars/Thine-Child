@@ -48,11 +48,17 @@
 @media only screen and (min-width: 1025px) {
 	#menu-wrapper {
 		position: absolute; 
-		top: 0px; 
+		top: 75px; 
 		right: 0px;
 		left: auto;
 		height: 50px;
 		z-index: 2;
+		padding-right: 0px !important;
+	}
+
+	#menu-wrapper > ul > li > a {
+		padding-right: 0px !important;
+		padding-left: 30px !important;
 	}
 }
 
